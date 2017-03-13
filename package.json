@@ -1,6 +1,14 @@
 {
+  "author": "Kyle Anson",
+  "name": "wur",
+  "version": "1.0.0",
+  "description": "would you rather online",
   "scripts": {
     "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Riski24/wur"
   },
   "dependencies": {
     "express": "^4.15.2"
