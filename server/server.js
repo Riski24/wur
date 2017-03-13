@@ -1,4 +1,6 @@
 var express = require('express');
 var app = express();
 
-module.exports = app;
+require('./routes.js');
+
+//module.exports = app;+
