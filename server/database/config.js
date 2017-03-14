@@ -12,7 +12,9 @@ if (process.env.DATABASE_URL) {
 
 var questions = db.define('questions', {
   choice1: {type: Sequelize.STRING, allowNull: false},
-  choice2: {type: Sequelize.STRING, allowNull: false}
+  choice2: {type: Sequelize.STRING, allowNull: false},
+  votes1: {type: Sequelize.INTEGER, defaultValue: 0},
+  votes2: {type: Sequelize.INTEGER, defaultValue: 0}
 }, {
   timestamps: false
 });

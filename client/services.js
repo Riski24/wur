@@ -30,9 +30,18 @@ angular.module('app.services', [])
     });
   };
 
+  var vote = function(data) {
+    return $http({
+      method: 'POST',
+      url: '/api/vote',
+      data: data
+    });
+  }
+
   return {
     getAll: getAll,
     getOne: getOne,
-    postOne: postOne
+    postOne: postOne,
+    vote: vote
   };
 });
