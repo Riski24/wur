@@ -1,14 +1,18 @@
 var express = require('express');
+var mongoose = require('mongoose');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
 var app = express();
 
+// connect to mongo database named "wur"
+mongoose.connect('mongodb://localhost/wur');
+
 ////////// middleware //////////
-// serve up static routes from the client folder
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+// serve up static routes from the client folder
 app.use(express.static(__dirname + '/../client'));
 
 ////////// routes //////////

@@ -12,7 +12,18 @@ angular.module('app.services', [])
     });
   };
 
+  var getOne = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/random'
+    })
+    .then(function(data) {
+      return data;
+    })
+  };
+
   return {
-    getAll: getAll
+    getAll: getAll,
+    getOne: getOne
   };
 });

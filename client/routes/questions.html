@@ -1,8 +1,12 @@
 <div id="container" ng-controller="QuestionsController">
   <h2>Questions</h2>
-  <div ng-repeat="question in defaultQuestions">
-    <div> {{question.choice1}} </div>
-    <div> {{question.choice2}} </div>
-    <br>
-  </div>
+  <ul>
+    <div ng-repeat="question in defaultQuestions">
+      <li>
+        <div> {{question.choice1}} </div>
+        <div> {{question.choice2}} </div>
+      </li>
+      <br>
+    </div>
+  </ul>
 </div>
