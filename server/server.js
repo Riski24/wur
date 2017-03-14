@@ -6,10 +6,10 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // connect to mongo database named "wur"
-mongoose.connect('mongodb://localhost/wur');
-mongoose.connection.once('open', function() {
-  console.log('wur mongodb connected successfully');
-});
+// mongoose.connect('mongodb://localhost/wur');
+// mongoose.connection.once('open', function() {
+//   console.log('wur mongodb connected successfully');
+// });
 
 ////////// middleware //////////
 app.use(morgan('dev'));
