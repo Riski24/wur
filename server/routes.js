@@ -1,5 +1,5 @@
+var questions = require('./questions/questions.js');
+
 module.exports = function(app) {
-  // app.get('/', function(req, res) {
-  //   res.send('Hello World');
-  // });
+  app.get('/api/questions', questions.getQuestions);
 };
