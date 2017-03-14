@@ -1,15 +1,11 @@
 var express = require('express');
-var mongoose = require('mongoose');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
 var app = express();
 
-// connect to mongo database named "wur"
-// mongoose.connect('mongodb://localhost/wur');
-// mongoose.connection.once('open', function() {
-//   console.log('wur mongodb connected successfully');
-// });
+// connect to postgresql database
+//var db = require('./database/config.js');
 
 ////////// middleware //////////
 app.use(morgan('dev'));

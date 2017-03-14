@@ -1,6 +1,7 @@
 angular.module('app', [
   'app.services',
   'app.questions',
+  'app.addQuestion',
   'app.random',
   'ngRoute'
 ])
@@ -9,6 +10,10 @@ angular.module('app', [
     .when('/questions', {
       controller: 'QuestionsController',
       templateUrl: 'routes/questions.html'
+    })
+    .when('/add-question', {
+      controller: 'AddQuestionController',
+      templateUrl: 'routes/add-question.html'
     })
     .when('/random', {
       controller: 'RandomController',

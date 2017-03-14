@@ -18,12 +18,21 @@ angular.module('app.services', [])
       url: '/api/random'
     })
     .then(function(data) {
-      return data;
+      return data.data;
     })
+  };
+
+  var postOne = function(data) {
+    return $http({
+      method: 'POST',
+      url: '/api/create-question',
+      data: data
+    });
   };
 
   return {
     getAll: getAll,
-    getOne: getOne
+    getOne: getOne,
+    postOne: postOne
   };
 });
